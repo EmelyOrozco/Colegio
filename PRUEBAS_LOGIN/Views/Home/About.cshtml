@@ -1,0 +1,22 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<link href="~/Content/Estilo/Grados.css" rel="stylesheet" />
+
+<!-- Mostrar solo los enlaces de los grados -->
+<div class="how-section1">
+    <h2>Grados</h2>
+
+    <div class="row">
+        @for (int i = 1; i <= 8; i++)
+        {
+            <div class="col-md-3">
+                <a href="@Url.Action($"Grado{i}", "Home")" class="btn btn-primary">@($"Grado {i}")</a>
+            </div>
+        }
+    </div>
+</div>
